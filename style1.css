@@ -1,0 +1,122 @@
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #a3b18a;
+    border-radius: 4px;
+  }
+ 
+  #card:hover .custom-box{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), transparent);}
+    #card:hover{
+    position: relative;
+    border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  overflow: hidden;
+  color: white;
+  font-family: serif;
+  font-size: 1.125rem; /* Equivalent to text-lg in Tailwind (18px) */
+  line-height: 1.5rem;  /* Equivalent to leading-6 in Tailwind (24px) */
+  cursor: pointer;
+  }
+#card{
+margin-bottom:40px;
+}
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;   /* px-4 */
+    padding-right: 1rem;
+    padding-top: 7px; /* py-5 */
+    padding-bottom: 5px;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    position: relative;
+    position: sticky;
+  }
+  
+  /* Responsive paddings */
+  @media (min-width: 640px) {
+    .navbar {
+      padding-left: 1.5rem;  /* sm:px-6 */
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .navbar {
+      padding-left: 2.5rem;  /* md:px-10 */
+      padding-right: 2.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .navbar {
+      padding-left: 4rem;    /* lg:px-16 */
+      padding-right: 4rem;
+    }
+  }
+  
+
+  .logo-img {
+    width: 165px;
+    height: 15vh;
+    object-fit: contain;
+    margin-left:50px;
+}
+.dropdown-container {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    z-index: 1000;
+  }
+  
+  .dropdown-btn {
+    font-size: 24px;
+    padding: 10px 15px;
+    background-color: #1e3a8a; /* dark blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    margin-top: 10px;
+    min-width: 200px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    padding: 10px 0;
+    overflow: hidden;
+  }
+  
+  .dropdown-menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+    font-family: serif;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-menu a:hover {
+    
+    text-decoration: underline;
+    
+  }
+  .dropdown-container:hover .dropdown-menu{
+    display:block;
+  }

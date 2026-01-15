@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: url('https://static.vecteezy.com/system/resources/previews/005/732/461/non_2x/night-time-scene-with-bright-full-moon-at-lake-vector.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .popup {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.4);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-box {
+      width: 350px;
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+      position: relative;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    input:focus {
+      outline: none;
+      border-bottom: 2px solid #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .link-text {
+      text-align: center;
+      margin-top: 15px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .link-text a {
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .link-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="popup" id="registration-popup">
+    <div class="form-box" id="registration-box">
+      <h2>Registration</h2>
+      <form method="POST" action="register.php" id="registerForm">
+        <input type="text" name="username" placeholder="Enter name" required />
+        <input type="email" name="email" placeholder="Enter email" required />
+        <input type="password" name="password" placeholder="Enter password" required />
+        <button type="submit">Register</button>
+      </form>
+      <div class="link-text">
+        Already registered? <a href="login.php">Log in</a>
+      </div>
+    </div>
+  </div>
+<a href="index.php" style="
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+  
+    padding: 8px 12px;
+    border-radius: 50%;
+   
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+" onmouseover="this.style.backgroundColor='rgba(0,0,0,0.7)'" onmouseout="this.style.backgroundColor='rgba(0,0,0,0)'">
+    &#8592;
+</a>
+</body>
+</html>
+
